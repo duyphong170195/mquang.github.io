@@ -194,10 +194,12 @@ function roundHalf(num) {
     option.value = voice.name;
     option.innerHTML = voice.name;
     voiceSelect.appendChild(option);
-
+   if(option.value == 'Google UK English Male'){
+    $('#voice').val('Google UK English Male');
+   }
    });
 
-   //$('#voice').val('Google UK English Male');
+   
   }
   loadVoices();
   
