@@ -4,7 +4,7 @@ var bag = [
         ["recruit", "employ", "applicant", "candidate", "interviewee"],
         ["hire", "rent", "lease", "leave", "abandon"],
         ["governor", "resident", "citizen", "inspector", "proctor", "supervisor"],
-        ["oversee", "colleague", "college", "headmaster", "term", "semester"],
+        ["oversee", "colleague", "college", "in charge", "headmaster", "term", "semester"],
         ["brochure", "agenda", "curriculum", "itinerary", "journey", "voyage"]
     ];
 var bonus = [
@@ -13,7 +13,7 @@ var bonus = [
  ["recruitment", "recruiter", "employee", "employer", "employment", "apply", "application", "candidacy", "interview"],
  ["for rent", "rental", "sublease"],
  ["government", "governance", "residential", "reside", "residence", "citizenship", "inspect", "supervisory", "supervise"],
- [],
+ ["principal", "headmistress", "in term of"],
  ["curriculum vitae"]
 ]
 var bind = Function.prototype.bind,
