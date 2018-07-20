@@ -50,7 +50,8 @@ $(document).keyup(function(e) {
   $('.pop-up').removeClass('open');
   $('.bao').empty();
 });
-
+new ScrollHandler("one");
+new ScrollHandler("two");
 function ScrollHandler(pageId) {
   var page = document.getElementById(pageId);
   var pageStart = page.offsetTop;
@@ -137,5 +138,3 @@ function ScrollHandler(pageId) {
     }
   });
 }
-new ScrollHandler("one");
-new ScrollHandler("two");
