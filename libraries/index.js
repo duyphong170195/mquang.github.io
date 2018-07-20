@@ -30,11 +30,10 @@ for(var i=1; i<=5;i++){
 }
   $('.thumbnail').click(function(){
      var id = $(this).attr('id');
-     var thenum = id.replace( /^\D+/g, '');
-     console.log(thenum);
-     
+     var thenum = id.replace( /^\D+/g, '');   
      $('.pop-up').addClass('open');
-
+     $('#phone_screen').addClass('ani');
+     $('#phone').addClass('ani2');
      for(var j=1; j<=7;j++){
       var mul = 7*thenum+j;
       var week = parseInt(thenum) + 1;
@@ -44,10 +43,14 @@ for(var i=1; i<=5;i++){
 
 $('.pop-up .close').click(function(){
   $('.pop-up').removeClass('open');
+  $('#phone_screen').removeClass('ani');
+  $('#phone').removeClass('ani2');
   $('.bao').empty();
 });
 $(document).keyup(function(e) {
   $('.pop-up').removeClass('open');
+  $('#phone_screen').removeClass('ani');
+  $('#phone').removeClass('ani2');
   $('.bao').empty();
 });
 new ScrollHandler("one");
