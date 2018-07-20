@@ -1,4 +1,4 @@
-body {
+  body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -290,8 +290,7 @@ h1 {
 .title1:nth-child(3) {
   color: #f1c83c;
 }
-.hi{
-  display: block;
+.hi, .gallery{
   width:100%;
   height: 100vh;
   position: relative;
@@ -371,4 +370,10 @@ svg.rocket .fil0 {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+#scroll {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
