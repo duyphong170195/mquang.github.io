@@ -300,6 +300,7 @@ h1 {
 .container2 {
   width: 100px;
   position: absolute;
+  display: none;
 }
 
 svg.rocket .fil1 {
