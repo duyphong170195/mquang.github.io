@@ -411,7 +411,7 @@ $(document).on("keypress", "form", function(event) {
 });
 
 $('#m tbody tr td:nth-child(1)').each(function(){
-  $(this).append('<img src="../photos\\speaker.png"/>');
+  $(this).append('<img src="../images\\speaker.png"/>');
 })
 $('#m tbody tr td:nth-child(1) img').each(function(){ 
   $(this).click(function(){
@@ -508,7 +508,7 @@ sound.src      = '../music/' + result + '.mp3';
 sound.loop = true;
 sound.load();
 $('li u').parent().css('line-height','25px');
-$('#relax').append('<div id="pli"><span>Nhạc nền:</span><select id="sel1"></select></div><div class="love"><p>Made with <img src="../photos/love.png" /> by <a href="https://www.facebook.com/nmquang.hust" target="_blank"> Minh Quang </a></p></div>');
+$('#relax').append('<div id="pli"><span>Nhạc nền:</span><select id="sel1"></select></div><div class="love"><p>Made with <img src="../images/love.png" /> by <a href="https://www.facebook.com/nmquang.hust" target="_blank"> Minh Quang </a></p></div>');
 
 for(var i = 1; i<=15; i++){
     $('#relax select').append('<option value="' + i +'">' + i + '.mp3</option>')
