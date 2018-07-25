@@ -59,6 +59,7 @@ $(document).keyup(function(e) {
 });
 new ScrollHandler("one");
 new ScrollHandler("two");
+new ScrollHandler("three");
 function ScrollHandler(pageId) {
   var page = document.getElementById(pageId);
   var pageStart = page.offsetTop;
