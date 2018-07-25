@@ -654,7 +654,9 @@ svg.rocket .fil0 {
 .gallery#three .thumbnail:hover .folder .file:before{
   background: black;
 }
+.gallery#three .folder,
 .gallery#three .folder:before,
+.gallery#three .folder:after,
 .gallery#three .thumbnail:hover .folder,
 .gallery#three .thumbnail:hover .folder:before,
 .gallery#three .thumbnail:hover .folder:after{
