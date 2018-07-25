@@ -653,12 +653,16 @@ svg.rocket .fil0 {
 .gallery#three .folder .file:before,
 .gallery#three .thumbnail:hover .folder .file:before{
   background: black;
+  box-shadow: none;
 }
 .gallery#three .folder,
 .gallery#three .folder:before,
-.gallery#three .folder:after,
 .gallery#three .thumbnail:hover .folder,
-.gallery#three .thumbnail:hover .folder:before,
+.gallery#three .thumbnail:hover .folder:before{
+  background: #afa0a0;
+}
+
+.gallery#three .folder:after,
 .gallery#three .thumbnail:hover .folder:after{
   background: white;
 }
