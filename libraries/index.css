@@ -648,3 +648,15 @@ svg.rocket .fil0 {
   background:var(--lighter);
   opacity:.8;
 }
+.gallery#three .folder .file,
+.gallery#three .folder .file:after,
+.gallery#three .folder .file:before,
+.gallery#three .thumbnail:hover .folder .file:before{
+  background: black;
+}
+.gallery#three .folder:before,
+.gallery#three .thumbnail:hover .folder,
+.gallery#three .thumbnail:hover .folder:before,
+.gallery#three .thumbnail:hover .folder:after{
+  background: white;
+}
