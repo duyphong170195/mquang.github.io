@@ -666,3 +666,16 @@ svg.rocket .fil0 {
 .gallery#three .thumbnail:hover .folder:after{
   background: white;
 }
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(249,249,249,0.1);
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4);
+}

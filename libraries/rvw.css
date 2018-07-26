@@ -123,3 +123,16 @@ output q:last-child {
 }
 output q:nth-of-type(9) ~ q {margin-left:40px;}
 audio{display: none;}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(249,249,249,0.1);
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4);
+}
