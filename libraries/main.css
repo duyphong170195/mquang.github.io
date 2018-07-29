@@ -704,7 +704,7 @@ h1{color:white;}
 }
 .current{background: black;padding-top: 5px;height: 440px;position: relative;margin-top: 20px}
 .dropdown-btn.visible{
-    height: 470px;
+    height: 495px;
    transition-property: height;  
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.85);

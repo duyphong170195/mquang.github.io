@@ -117,7 +117,7 @@ function roundHalf(num) {
 }
 
 // the time limit, in minutes
- QUIZ_TIME_LIMIT = roundHalf(rows*10/60);  
+ QUIZ_TIME_LIMIT = roundHalf(rows*10/60) + 20/60;  
   function startQuiz() {
     // init some variables
     initAnswers();
@@ -129,7 +129,7 @@ function roundHalf(num) {
         }
     });       
       if($('#qbo').is(':checked') == true){
-        timeRemaining = Math.round(roundHalf(QUIZ_ANSWERS.length*10/60) * 60);
+        timeRemaining = Math.round(roundHalf(QUIZ_ANSWERS.length*10/60) * 60 + 20);
       }
 
     score = 0;
