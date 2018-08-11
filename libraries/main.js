@@ -60,10 +60,10 @@ var ar = [
     
     $('.items').find('*').not('h2').remove();
     sulist = shuffle(sulist);
-     for(var id1 = 0; id1 < sulist.length; id1 ++){
-   $('.items').prepend('<input id="item'+ id1 +'" type="checkbox" onclick="return false" onkeydown="return false"><label for="item' + id1 +'">' + sulist[id1] + '</label>');
-  }
-  clearInterval(timeInterval);
+for(var id1 = 0; id1 < sulist.length; id1 ++){
+ $('.items').prepend('<input id="item'+ id1 +'" type="checkbox" onclick="return false" onkeydown="return false"><label for="item' + id1 +'">' + sulist[id1] + '</label>');
+}
+    clearInterval(timeInterval);
     reset();
     $(this).prop("disabled", true);
   });
@@ -301,6 +301,7 @@ function roundHalf(num) {
 
       $('.end-greeting').text('Perfect, with ' + getTimeString() + ' remaining!');
       setToastMood('happy', true);
+      open($('figure'));
       var msg = new SpeechSynthesisUtterance('Congratulations');
        if (voiceSelect.value) {
         msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == voiceSelect.value; })[0];
@@ -370,6 +371,18 @@ function roundHalf(num) {
     $('.start, .status-timer, .status-current-score, .scored-answers').show();
     $('.input').prop('disabled', false).val('');
     $('.answers').empty();
+
+    numbers.shuffle();
+    var grand = numbers.pop();
+    
+     var grand2 = grand + '.jpg';
+if(grand == 99 || grand == 70 || grand == 80 || grand == 90 || grand == 100){
+  $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
+
+    }else{
+      $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img src="../gift/'+grand2+'"/></figure></div>');
+    }
+    
     $('.toggle').text('see what you missed');
     setToastMood('neutral', true);
     $('.items input').prop('checked', false);
@@ -400,8 +413,8 @@ function roundHalf(num) {
      for(var id1 = 0; id1 < sulist.length; id1 ++){
    $('.items').prepend('<input id="item'+ id1 +'" type="checkbox" onclick="return false" onkeydown="return false"><label for="item' + id1 +'">' + sulist[id1] + '</label>');
   }
+  
      reset();
-
     });
 
   });
@@ -580,5 +593,77 @@ $('#m tbody tr td:nth-child(4) li:not(.exc) i').each(function(){
        window.speechSynthesis.speak(msg);
   });  
 });
+
+
+
+
+function arrayShuffle () {
+       var i = this.length, j, temp;
+       if ( i === 0 ) return false;
+       while ( --i ) {
+          j = Math.floor( Math.random() * ( i + 1 ) );
+          temp = this[i];
+          this[i] = this[j]; 
+          this[j] = temp;
+       }
+    }
+
+Array.prototype.shuffle =arrayShuffle;
+    
+var start = 1;
+var end = 100;
+var numbers = new Array(); 
+for (var i = start; i <= end; i++) {
+    numbers.push(i);
+}
+numbers.shuffle();
+var grand = numbers.pop();
+var grand2 = grand + '.jpg';
+ if(grand == 99 || grand == 70 || grand == 80 || grand == 90 || grand == 100){
+  $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
+}else{
+  $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img src="../gift/'+grand2+'"/></figure></div>')
+}
+    $(document).on('click', '.popup img', function(){
+      return false;
+    }).on('click', '.popup', function(){
+      close();
+    })
+var vid = document.getElementById("gift");
+  function open($figure) {
+    $('.gallery').addClass('pop');
+    if(vid != null){
+      vid.autoplay = true;
+      vid.load();
+    }
+    
+    $popup = $('<div class="popup" />').appendTo($('body'));
+    $fig = $figure.clone().appendTo($('.popup'));
+    $bg = $('<div class="bg" />').appendTo($('.popup'));
+    $close = $('<div class="close1"><i class="fa fa-times-circle" style="font-size:30px"></i></div>').appendTo($fig);
+ 
+    $shadow = $('<div class="shadow" />').appendTo($fig);
+    src = $('img', $fig).attr('src');
+    $shadow.css({backgroundImage: 'url(' + src + ')'});
+    $bg.css({backgroundImage: 'url(' + src + ')'});
+    setTimeout(function(){
+      $('.popup').addClass('pop');
+    }, 10);
+  }
+  function close(){
+    $('.gallery, .popup').removeClass('pop');
+    setTimeout(function(){
+      $('.popup').remove();
+    }, 100);
+    if(vid != null){
+      vid.autoplay = false;
+      vid.load();
+    }
+  }
+
+
+
+
+
 
 
