@@ -202,7 +202,7 @@ dfn {
   }
 
   .done {
-    order: 1;
+    order: 3;
   }
 
   .done::after {
@@ -210,7 +210,7 @@ dfn {
   }
 
   .undone {
-    order: 3;
+    order: 1;
   }
 
   .undone::after {
@@ -222,13 +222,13 @@ dfn {
     display: block;
     height: 53px;
     margin: 0 0 -53px -9999px;
-    order: 4;
+    order: 2;
     outline: none;
     counter-increment: undone-items;
   }
 
   .container2 input:checked {
-    order: 2;
+    order: 4;
     counter-increment: done-items;  
   }
 
@@ -237,7 +237,7 @@ dfn {
     position: relative;
     padding: 15px 0 15px 45px;
     border-top: 1px dashed #fff;
-    order: 4;
+    order: 2;
     cursor: pointer;
     animation: undone .5s;
   }
@@ -256,7 +256,7 @@ dfn {
   }
 
   .items input:checked + label {
-    order: 2;
+    order: 4;
     animation: done .5s;
   }
 
@@ -268,7 +268,6 @@ dfn {
     0% {
       opacity: 0;
       background-color: rgba(255, 255, 255, .4);
-      transform: translateY(20px);
     }
     50% {
       opacity: 1;
@@ -558,12 +557,17 @@ a img{cursor: zoom-in;}
 .list-group a{color:black;}
 #relax{
     position: fixed;
+   
     bottom: 0;
     padding: 15px 0;
     background: black;
     width:100%;
+    left:calc(100% - 200px);
     text-align: center;
     transition: .5s;
+}
+#relax:hover{
+  left:0;
 }
 .display li{margin: -10px 0;list-style-type: none;
     margin: 10px;}
@@ -1162,4 +1166,26 @@ tr{vertical-align: top;}
     -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, -225, 0, 1);
             transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, -225, 0, 1);
   }
+}
+
+.add-animation{
+    border: solid 2px #232323;
+    color: #232323;
+    border-radius: 0.4em;
+    cursor: pointer;
+    height: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+    background: transparent;
+    animation: jump .9s;
+    animation-iteration-count: infinite;
+}
+.add-animation:hover{
+  animation:none;
+}
+@-webkit-keyframes jump {
+  0% {transform: scale(1, 1) translate(0px, 0px);}
+  30% {transform: scale(1, 0.8) translate(0px, 8px);}
+  75% {transform: scale(1, 1.1) translate(0px, -20px);}
+  100% {transform: scale(1, 1) translate(0px, 0px);}
 }

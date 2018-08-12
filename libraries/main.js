@@ -299,7 +299,7 @@ function roundHalf(num) {
       $('.fa-chevron-circle-up').css('display','block');
       $('.fa-chevron-circle-up').animate({bottom:'90px'});
 
-      $('.end-greeting').text('Perfect, with ' + getTimeString() + ' remaining!');
+      $('.end-greeting').text('Kinh đấy, còn hẳn ' + getTimeString() + ' thời gian!');
       setToastMood('happy', true);
       open($('figure'));
       var msg = new SpeechSynthesisUtterance('Congratulations');
@@ -309,13 +309,13 @@ function roundHalf(num) {
    window.speechSynthesis.speak(msg);
     } else if (score > 0) {
       // neutral
-      $('.end-greeting').text('Time\'s up!');
+      $('.end-greeting').text('Hết giờ!');
       setToastMood('neutral', true);
       renderMissedAnswers();
       $('.status-toggle-answers').show();
     } else {
       // sad
-      $('.end-greeting').text('Nothing...');
+      $('.end-greeting').text('Sao vậy...');
       setToastMood('sad', true);
       renderMissedAnswers();
       $('.scored-answers').hide();
@@ -337,12 +337,12 @@ function roundHalf(num) {
     
     if ($('.scored-answers').is(':visible')) {
       // switch to missed answers
-      $('.toggle').text('see what you got');
+      $('.toggle').text('Xem những từ bro đã gõ được');
       $('.scored-answers').hide();
       $('.missed-answers').show();
     } else {
       // switch to scored answers
-      $('.toggle').text('see what you missed');
+      $('.toggle').text('Xem những từ bro chưa gõ được');
       $('.missed-answers').hide();
       $('.scored-answers').show();
     }
@@ -376,14 +376,14 @@ function roundHalf(num) {
     var grand = numbers.pop();
     
      var grand2 = grand + '.jpg';
-if(grand == 99 || grand == 70 || grand == 80 || grand == 90 || grand == 100){
+if(grand == 99 || grand == 70 || grand == 80 || grand == 90 || grand == 100 || grand == 110){
   $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 
     }else{
       $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img src="../gift/'+grand2+'"/></figure></div>');
     }
     
-    $('.toggle').text('see what you missed');
+    $('.toggle').text('Xem những từ bro chưa gõ được');
     setToastMood('neutral', true);
     $('.items input').prop('checked', false);
     return focusr = true;
@@ -611,7 +611,7 @@ function arrayShuffle () {
 Array.prototype.shuffle =arrayShuffle;
     
 var start = 1;
-var end = 100;
+var end = 110;
 var numbers = new Array(); 
 for (var i = start; i <= end; i++) {
     numbers.push(i);
@@ -619,7 +619,9 @@ for (var i = start; i <= end; i++) {
 numbers.shuffle();
 var grand = numbers.pop();
 var grand2 = grand + '.jpg';
- if(grand == 99 || grand == 70 || grand == 80 || grand == 90 || grand == 100){
+var myAudio = document.getElementById('audio-player');
+
+ if(grand == 99 || grand == 70 || grand == 80 || grand == 90 || grand == 100 || grand == 110){
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 }else{
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img src="../gift/'+grand2+'"/></figure></div>')
@@ -635,8 +637,11 @@ var vid = document.getElementById("gift");
     if(vid != null){
       vid.autoplay = true;
       vid.load();
+        if (myAudio.duration > 0 && !myAudio.paused) {
+          myAudio.pause();
+       }
     }
-    
+
     $popup = $('<div class="popup" />').appendTo($('body'));
     $fig = $figure.clone().appendTo($('.popup'));
     $bg = $('<div class="bg" />').appendTo($('.popup'));
