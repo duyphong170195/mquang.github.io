@@ -634,9 +634,10 @@ var myAudio = document.getElementById('audio-player');
     }).on('click', '.popup', function(){
       close();
     })
-var vid = document.getElementById("gift");
+
   function open($figure) {
     $('.gallery').addClass('pop');
+    var vid = document.getElementById("gift");
     if(vid != null){
       vid.autoplay = true;
       vid.load();
@@ -663,6 +664,7 @@ var vid = document.getElementById("gift");
     setTimeout(function(){
       $('.popup').remove();
     }, 100);
+    var vid = document.getElementById("gift");
     if(vid != null){
       vid.autoplay = false;
       vid.load();
