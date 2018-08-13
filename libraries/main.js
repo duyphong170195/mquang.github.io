@@ -379,7 +379,7 @@ function roundHalf(num) {
     var grand = numbers.pop();
     
      var grand2 = grand + '.jpg';
-if(grand == 99 || grand == 70 || ggrand == 99 || grand == 70 || grand == 80 || grand == 90 || grand == 100 || grand == 110 || grand == 105 || grand == 106 || grand == 115){
+if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115){
   $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 
     }else{
@@ -624,7 +624,7 @@ var grand = numbers.pop();
 var grand2 = grand + '.jpg';
 var myAudio = document.getElementById('audio-player');
 
- if(grand == 99 || grand == 70 || ggrand == 99 || grand == 70 || grand == 80 || grand == 90 || grand == 100 || grand == 110 || grand == 105 || grand == 106 || grand == 115){
+ if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115){
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 }else{
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img src="../gift/'+grand2+'"/></figure></div>')
