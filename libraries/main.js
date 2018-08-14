@@ -383,7 +383,7 @@ if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || g
   $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 
     }else{
-      $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img src="../gift/'+grand2+'"/></figure></div>');
+      $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>');
     }
     
     $('.toggle').text('Xem những từ bro chưa gõ được');
@@ -614,7 +614,7 @@ function arrayShuffle () {
 Array.prototype.shuffle =arrayShuffle;
     
 var start = 1;
-var end = 110;
+var end = 115;
 var numbers = new Array(); 
 for (var i = start; i <= end; i++) {
     numbers.push(i);
@@ -627,7 +627,7 @@ var myAudio = document.getElementById('audio-player');
  if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115){
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 }else{
-  $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img src="../gift/'+grand2+'"/></figure></div>')
+  $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>')
 }
     $(document).on('click', '.popup img', function(){
       return false;
@@ -637,15 +637,7 @@ var myAudio = document.getElementById('audio-player');
 
   function open($figure) {
     $('.gallery').addClass('pop');
-    var vid = document.getElementById("gift");
-    if(vid != null){
-      vid.autoplay = true;
-      vid.load();
-        if (myAudio.duration > 0 && !myAudio.paused) {
-          myAudio.pause();
-       }
-    }
-
+    
     $popup = $('<div class="popup" />').appendTo($('body'));
     $fig = $figure.clone().appendTo($('.popup'));
     $bg = $('<div class="bg" />').appendTo($('.popup'));
@@ -655,6 +647,27 @@ var myAudio = document.getElementById('audio-player');
     src = $('img', $fig).attr('src');
     $shadow.css({backgroundImage: 'url(' + src + ')'});
     $bg.css({backgroundImage: 'url(' + src + ')'});
+    $('.gallery').find("*").removeAttr("id");
+    var vid = document.getElementById("gift");
+    var wImg = document.getElementById("gImg");
+    if(wImg != null){
+      var mImage = (600 - wImg.clientWidth)/2; 
+      $('.popup figure').css('margin-left',mImage);
+    }
+
+    if(vid != null){
+      
+      vid.onloadedmetadata = function() {
+        var mVid = (600 - vid.offsetWidth)/2;
+        $('.popup figure').css('margin-left',mVid);
+      }; 
+
+      vid.autoplay = true;
+      vid.load();
+        if (myAudio.duration > 0 && !myAudio.paused) {
+          myAudio.pause();
+       }
+    }
     setTimeout(function(){
       $('.popup').addClass('pop');
     }, 10);
