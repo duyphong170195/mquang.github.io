@@ -557,18 +557,21 @@ a img{cursor: zoom-in;}
 .list-group a{color:black;}
 #relax{
     position: fixed;
-   
     bottom: 0;
     padding: 15px 0;
     background: black;
     width:100%;
-    left:calc(100% - 200px);
+    
     text-align: center;
-    transition: .5s;
+    transition: .7s;
 }
-#relax:hover{
+#pli span{text-align: center;}
+#pli span i{
+  font-size:24px; color:white;margin-right:25px; vertical-align: middle;cursor: pointer;
+}
+/*#relax:hover{
   left:0;
-}
+}*/
 .display li{margin: -10px 0;list-style-type: none;
     margin: 10px;}
 .display a{

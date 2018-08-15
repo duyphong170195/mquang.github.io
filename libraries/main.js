@@ -524,8 +524,19 @@ sound.src      = '../music/' + result + '.mp3';
 sound.loop = true;
 sound.load();
 $('li u').parent().css('line-height','25px');
-$('#relax').append('<div id="pli"><span>Nhạc nền:</span><select id="sel1"></select></div><div class="love"><p>Made with <img src="../images/love.png" /> by <a href="https://www.facebook.com/nmquang.hust" target="_blank"> Minh Quang </a></p></div>');
+$('#relax').append('<div id="pli"><span><i class="fa fa-caret-right" id="collapse"></i> Nhạc nền:</span><select id="sel1"></select></div><div class="love"><p>Made with <img src="../images/love.png" /> by <a href="https://www.facebook.com/nmquang.hust" target="_blank"> Minh Quang </a></p></div>');
 
+$(document).on('click','#collapse',function(){
+  console.log('click phai');
+  $('#relax').css({'left':'calc(100% - 58px)'});
+  $(this).replaceWith('<i class="fa fa-caret-left" id="expand"></i>');
+  
+});
+$(document).on('click','#expand',function(){
+     console.log('click trai');
+     $('#relax').css('left','0');
+     $(this).replaceWith('<i class="fa fa-caret-right" id="collapse"></i>');
+  });
 for(var i = 1; i<=15; i++){
     $('#relax select').append('<option value="' + i +'">' + i + '.mp3</option>')
 }
