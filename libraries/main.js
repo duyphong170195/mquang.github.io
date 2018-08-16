@@ -695,6 +695,10 @@ var myAudio = document.getElementById('audio-player');
     }
   }
 
+  $('.btn-primary').on('click',function(){
+     $('.panel-body p').show();
+  });
+
 
 
 
