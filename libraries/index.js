@@ -26,7 +26,11 @@ function animation() {
 }
 for(var i=1; i<=15;i++){
   var temp = i - 1;
-  $('.gallery#two').append('<div class="thumbnail" id="w'+temp+'"><span class="folder"><span class="file"></span></span><div class="title">Tuần '+i+'</div></div>');
+  if(temp == 8){
+    $('.gallery#two').append('<div class="thumbnail" id="w'+temp+'"><span class="folder"><span class="file"></span></span><div class="title">Tuần '+i+' <i class="em em-email"></i></div></div>');
+  }else{
+    $('.gallery#two').append('<div class="thumbnail" id="w'+temp+'"><span class="folder"><span class="file"></span></span><div class="title">Tuần '+i+'</div></div>');
+  }
 }
 for(var i=16; i<=tuan;i++){
   var temp = i - 1;
