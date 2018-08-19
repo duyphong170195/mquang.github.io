@@ -379,7 +379,7 @@ function roundHalf(num) {
     var grand = numbers.pop();
     
      var grand2 = grand + '.jpg';
-if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115){
+if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125){
   $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 
     }else{
@@ -527,13 +527,11 @@ $('li u').parent().css('line-height','25px');
 $('#relax').append('<div id="pli"><span><i class="fa fa-caret-right" id="collapse"></i> Nhạc nền:</span><select id="sel1"></select></div><div class="love"><p>Made with <img src="../images/love.png" /> by <a href="https://www.facebook.com/nmquang.hust" target="_blank"> Minh Quang </a></p></div>');
 
 $(document).on('click','#collapse',function(){
-  console.log('click phai');
   $('#relax').css({'left':'calc(100% - 58px)'});
   $(this).replaceWith('<i class="fa fa-caret-left" id="expand"></i>');
   
 });
 $(document).on('click','#expand',function(){
-     console.log('click trai');
      $('#relax').css('left','0');
      $(this).replaceWith('<i class="fa fa-caret-right" id="collapse"></i>');
   });
@@ -625,7 +623,7 @@ function arrayShuffle () {
 Array.prototype.shuffle =arrayShuffle;
     
 var start = 1;
-var end = 115;
+var end = 131;
 var numbers = new Array(); 
 for (var i = start; i <= end; i++) {
     numbers.push(i);
@@ -635,7 +633,7 @@ var grand = numbers.pop();
 var grand2 = grand + '.jpg';
 var myAudio = document.getElementById('audio-player');
 
- if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115){
+ if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125){
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 }else{
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>')
