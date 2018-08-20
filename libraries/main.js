@@ -696,8 +696,8 @@ var myAudio = document.getElementById('audio-player');
   $('.btn-primary').on('click',function(){
      $('.panel-body p').show();
   });
-
-
+var iWidth = $('#m td:nth-child(4) iframe').width();
+$('#m td:nth-child(4) iframe').css({'margin-bottom':'20px','height':iWidth*9/16});
 
 
 
