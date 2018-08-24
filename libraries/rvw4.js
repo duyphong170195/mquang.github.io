@@ -10,7 +10,7 @@ var bag = [
 var bonus = [
  [],
  ["consultant", "consultancy", "compensate", "maintain", "preserve", "conserve", "conservatory", "conservative"],
- ["recruitment", "recruiter", "employee", "employer", "employment", "apply", "application", "candidacy", "interview"],
+ ["recruitment", "recruiter", "employee", "employer", "employment","unemployment", "apply", "application", "candidacy", "interview"],
  ["for rent", "rental", "sublease"],
  ["government", "governance", "residential", "reside", "residence", "citizenship", "inspect", "supervisory", "supervise"],
  ["principal", "headmistress", "in term of"],
