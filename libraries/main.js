@@ -380,10 +380,10 @@ function roundHalf(num) {
     
      var grand2 = grand + '.jpg';
 if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125 || grand == 145 || grand == 148){
-  $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
+  $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 
     }else{
-      $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>');
+      $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>');
     }
     
     $('.toggle').text('Xem những từ bro chưa gõ được');
@@ -632,19 +632,14 @@ numbers.shuffle();
 var grand = numbers.pop();
 var grand2 = grand + '.jpg';
 var myAudio = document.getElementById('audio-player');
-
-//  if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125){
-//   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
-// }else{
-//   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>')
-// }
+var praise = "I'm impressed";
 
 switch(grand){
   case 70: case 80: case 90: case 99: case 100: case 105: case 106: case 110: case 115: case 120: case 125: case 145: case 148:
-  $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
+  $('body').append('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
   break;
   default:
-  $('body').append('<div class="gallery" style="display:none"><figure><figcaption>Giỏi lắm anh <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>bình tĩnh, kiên trì, chăm chỉ luyện tập nha</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>');  
+  $('body').append('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>');  
 }
 
     $(document).on('click', '.popup img', function(){
@@ -652,7 +647,9 @@ switch(grand){
     }).on('click', '.popup', function(){
       close();
     })
-
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27) close();   // esc
+    });
   function open($figure) {
     $('.gallery').addClass('pop');
     
