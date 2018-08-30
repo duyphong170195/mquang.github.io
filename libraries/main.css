@@ -1216,3 +1216,5 @@ tr{vertical-align: top;}
     background-color: yellow;
     color: black;
   }
+  #diff{top:10px;}
+  #limit{top:-20px;}

@@ -11,7 +11,7 @@ var bonus = [
  ["majority", "satisfaction", "satisfactory", "exam", "examination"],
  ["participant", "patronize", "consume", "customer", "mentalism", "mentality", "mentalization", "mentalist"],
  ["proximate", "amplitude", "amplifier", "amplify", "classify", "exclusion", "exclude", "concentrate", "comply", "compliant"],
- ["haste", "contrary","conveyor","conveyance", "sincerity", "sincerely"],
+ ["haste", "hasty", "contrary","conveyor","conveyance", "sincerity", "sincerely"],
  ["grateful", "thankful","correspondent", "prediction", "adversity", "adversary", "enemy", "opponent"],
  ["commendation", "commencement"],
  ["cautious", "precaution", "afford", "expensive", "expend", "extension"]

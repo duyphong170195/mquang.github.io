@@ -1,5 +1,5 @@
 var bag = [
-        ["brave", "courage", "encourage", "inspire", "motivate"],
+        ["brave", "courage", "encourage", "inspire", "motivate","incentive"],
         ["imply", "involve", "implicate", "indicate", "dedicate"],
         ["refer to", "mention", "hint", "suggest"],
         ["organization", "institute", "constitute", "collaborate", "cooperate", "corporate"],
@@ -8,7 +8,7 @@ var bag = [
         ["refuse", "reject", "decline", "deny"]
     ];
 var bonus = [
- ["bravery", "bravado", "courageous", "encouragement", "discourage", "inspiration", "motive", "motivation"],
+ ["bravery", "bravado", "courageous", "encouragement", "discourage", "inspiration", "motive", "motivation","incentivize"],
  ["involvement", "involved", "implication", "dedicated"],
  ["reference", "don't mention it", "suggestion"],
  ["organize", "institution", "collaboration", "collaborative", "cooperation", "corporation", "incorporated", "incorporate"],

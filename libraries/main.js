@@ -1,9 +1,9 @@
 $('body').append('<i class="fa fa-chevron-circle-up" style="font-size:36px" onclick="topFunction()"></i>')
-$('.container_q').append('<div class="qbo"><input type="checkbox" id="qbo"><label for="qbo">Tăng độ khó (thêm các họ từ liên quan)</label></div>')
-$('.qbo').css({
+$('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm" checked><label for="lm">Em chưa 16 (đừng bỏ tích nếu bạn là nữ hoặc nam dưới 16)</label></div>')
+$('.container_q').append('<div class="qbo" id="diff"><input type="checkbox" id="qbo"><label for="qbo">Tăng độ khó (thêm các họ từ liên quan)</label></div>')
+$('#diff, #limit').css({
       'position':'absolute',
-      'left':$('.entry-main').offset().left,
-      'top':'10px'
+      'left':$('.entry-main').offset().left
 });
 $('#m tbody tr td:nth-child(1)').attr('data-label','Từ / Cụm từ');
   $('#m tbody tr td:nth-child(2)').attr('data-label','Phiên âm');
@@ -304,7 +304,10 @@ function roundHalf(num) {
 
       $('.end-greeting').text('Kinh đấy, còn hẳn ' + getTimeString() + ' thời gian!');
       setToastMood('happy', true);
-      open($('figure'));
+      if(! $('#limit').find('input').is(':checked')) {
+        open($('figure'));
+      }
+      
       var msg = new SpeechSynthesisUtterance('Congratulations');
        if (voiceSelect.value) {
         msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == voiceSelect.value; })[0];
@@ -379,7 +382,7 @@ function roundHalf(num) {
     var grand = numbers.pop();
     
      var grand2 = grand + '.jpg';
-if(grand == 70 || grand == 80 || grand == 90 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125 || grand == 145 || grand == 148){
+if(grand == 70 || grand == 80 || grand == 90 || grand == 97 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125 || grand == 145 || grand == 148 || grand == 152 || grand == 153 || grand == 161){
   $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
 
     }else{
@@ -535,7 +538,7 @@ $(document).on('click','#expand',function(){
      $('#relax').css('left','0');
      $(this).replaceWith('<i class="fa fa-caret-right" id="collapse"></i>');
   });
-for(var i = 1; i<=15; i++){
+for(var i = 1; i<=16; i++){
     $('#relax select').append('<option value="' + i +'">' + i + '.mp3</option>')
 }
 $('#relax select').val(result);
@@ -623,7 +626,7 @@ function arrayShuffle () {
 Array.prototype.shuffle =arrayShuffle;
     
 var start = 1;
-var end = 150;
+var end = 165;
 var numbers = new Array(); 
 for (var i = start; i <= end; i++) {
     numbers.push(i);
@@ -635,7 +638,7 @@ var myAudio = document.getElementById('audio-player');
 var praise = "I'm impressed";
 
 switch(grand){
-  case 70: case 80: case 90: case 99: case 100: case 105: case 106: case 110: case 115: case 120: case 125: case 145: case 148:
+  case 70: case 80: case 90: case 97: case 99: case 100: case 105: case 106: case 110: case 115: case 120: case 125: case 145: case 148: case 152: case 153: case 161:
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
   break;
   default:
