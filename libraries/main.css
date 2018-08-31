@@ -829,7 +829,7 @@ tr{vertical-align: top;}
 }
 .popup figure {
   position: absolute;
-  top: 40%;
+  top: 38%;
   left: 50%;
   height: 90vh;
   -webkit-transform: translate(-50%, -50%);
