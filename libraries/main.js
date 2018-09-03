@@ -1,5 +1,5 @@
 $('body').append('<i class="fa fa-chevron-circle-up" style="font-size:36px" onclick="topFunction()"></i>')
-$('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm" checked><label for="lm">Em chưa 16 (đừng bỏ tích nếu bạn là nữ hoặc nam dưới 16)</label></div>')
+$('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm" checked><label for="lm">Em chưa 16 (đừng bỏ tích nếu bạn là nữ hoặc nam dưới 16 tuổi)</label></div>')
 $('.container_q').append('<div class="qbo" id="diff"><input type="checkbox" id="qbo"><label for="qbo">Tăng độ khó (thêm các họ từ liên quan)</label></div>')
 $('#diff, #limit').css({
       'position':'absolute',
@@ -626,7 +626,7 @@ function arrayShuffle () {
 Array.prototype.shuffle =arrayShuffle;
     
 var start = 1;
-var end = 170;
+var end = 175;
 var numbers = new Array(); 
 for (var i = start; i <= end; i++) {
     numbers.push(i);
