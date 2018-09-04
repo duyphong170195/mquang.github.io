@@ -670,14 +670,19 @@ switch(grand){
     var wImg = document.getElementById("gImg");
     if(wImg != null){
       var mImage = (600 - wImg.clientWidth)/2; 
-      $('.popup figure').css('margin-left',mImage);
+      var tImage = (450 - wImg.clientHeight)/2; 
+      $('.popup figure').css({
+        'margin-left':mImage,
+        'margin-top': tImage
+      });
     }
 
     if(vid != null){
       
       vid.onloadedmetadata = function() {
         var mVid = (600 - vid.offsetWidth)/2;
-        $('.popup figure').css('margin-left',mVid);
+        var tVid = (450 - vid.clientHeight)/2; 
+        $('.popup figure').css({'margin-left':mVid,'margin-top':tVid});
       }; 
 
       vid.autoplay = true;

@@ -829,7 +829,7 @@ tr{vertical-align: top;}
 }
 .popup figure {
   position: absolute;
-  top: 38%;
+  top: 50%;
   left: 50%;
   height: 90vh;
   -webkit-transform: translate(-50%, -50%);
@@ -841,9 +841,7 @@ tr{vertical-align: top;}
   -webkit-animation: poppy 500ms linear both;
           animation: poppy 500ms linear both;
 }
-@media screen and (min-width: 1440px) {
-  .popup figure{top:33%;}
-}
+
 .popup figure img, .popup figure video {
   position: relative;
   z-index: 2;
