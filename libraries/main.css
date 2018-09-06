@@ -1200,7 +1200,7 @@ tr{vertical-align: top;}
   }
   .panel-primary audio{
     display: table;
-    margin:0 auto;
+    margin:15px auto;
   }
   .panel-primary p{
     font-size: 20px;
@@ -1216,3 +1216,4 @@ tr{vertical-align: top;}
   }
   #diff{top:10px;}
   #limit{top:-20px;}
+  .panel-body hr{border: 2px solid #337ab7;}
