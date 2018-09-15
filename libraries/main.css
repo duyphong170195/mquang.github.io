@@ -1217,3 +1217,9 @@ tr{vertical-align: top;}
   #diff{top:10px;}
   #limit{top:-20px;}
   .panel-body hr{border: 2px solid #337ab7;}
+  .home{margin-top: 20px;
+    margin-left: 20px;}
+  .butt{position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -150px;}
