@@ -1223,3 +1223,6 @@ tr{vertical-align: top;}
     top: 20px;
     left: 50%;
     margin-left: -150px;}
+  #m tr td span{
+    font-style: italic;display: table;margin: auto;
+  }
