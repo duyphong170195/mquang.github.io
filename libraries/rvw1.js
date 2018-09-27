@@ -5,14 +5,14 @@ var bag = [
         ["hastily", "provided that", "go into effect", "On the contrary", "On the whole", "convey", "sincere", "accommodate"],
         ["automobile", "gratitude", "commemorative", "domestic", "correspond", "equivalent", "predict", "adverse"],
         ["ancient", "accent", "altitude", "attitude", "attach", "attack", "comment", "commend", "commence"],
-        ["eligible", "caution", "as well as", "influence", "fluent", "affordable", "expense", "extend"],
+        ["eligible", "caution", "as well as", "influence", "fluent", "expense", "extend"],
     ];
 var bonus = [
  ["majority", "satisfaction", "satisfactory", "exam", "examination"],
  ["participant", "patronize", "consume", "customer", "mentalism", "mentality", "mentalization", "mentalist"],
- ["proximate", "amplitude", "amplifier", "amplify", "classify", "exclusion", "exclude", "concentrate", "comply", "compliant"],
+ ["overestimate", "underestimate", "proximate", "amplitude", "amplifier", "amplify", "classify", "exclusion", "exclude", "concentrate", "comply", "compliant"],
  ["haste", "hasty", "contrary","conveyor","conveyance", "sincerity", "sincerely"],
- ["grateful", "thankful","correspondent", "prediction", "adversity", "adversary", "enemy", "opponent"],
+ ["grateful", "thankful","correspondent", "correspondence", "prediction", "adversity", "adversary", "enemy", "opponent"],
  ["commendation", "commencement"],
  ["cautious", "precaution", "afford", "expensive", "expend", "extension"]
 ]

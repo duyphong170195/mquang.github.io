@@ -274,7 +274,12 @@ label.tree_label:after { border-bottom: 0; }
     <label class="tree_label day">Ngày 3</label>
     <ul>
       <li>
-        <li><span class="tree_label">(n, v) estimate</span></li>
+        <input type="checkbox" />
+        <label class="tree_label">(n, v) estimate</label>
+        <ul>
+          <li><span class="tree_label">(n, v) overestimate</span></li>
+          <li><span class="tree_label">(n, v) underestimate</span></li>
+        </ul>
       </li>
       <li>
         <input type="checkbox" />
@@ -1902,6 +1907,7 @@ label.tree_label:after { border-bottom: 0; }
         </ul>
       </li>
       <li><span class="tree_label">(n, v) contract</span></li>
+      <li><span class="tree_label">(n, v) compromise</span></li>
     </ul>
   </li>
 
@@ -1910,7 +1916,13 @@ label.tree_label:after { border-bottom: 0; }
     <label class="tree_label day">Ngày 47</label>
     <ul>
       <li><span class="tree_label">(n, v) access</span></li>
-      <li><span class="tree_label">(n, adj) excess</span></li>
+      <li>
+        <input type="checkbox" />
+        <label class="tree_label">(n, adj) excess</label>
+        <ul>
+          <li><span class="tree_label">(v) exceed</span></li>
+        </ul>
+      </li>
       <li>
         <input type="checkbox" />
         <label class="tree_label">(v) assess</label>
