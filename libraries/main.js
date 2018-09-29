@@ -533,7 +533,7 @@ $('li u').parent().css('line-height','25px');
 $('#relax').append('<div id="pli"><span><i class="fa fa-caret-right" id="collapse"></i> Nhạc nền:</span><select id="sel1"></select></div><div class="love"><p>Made with <img src="../images/love.png" /> by <a href="https://www.facebook.com/nmquang.hust" target="_blank"> Minh Quang </a></p></div>');
 
 $(document).on('click','#collapse',function(){
-  $('#relax').css({'left':'calc(100% - 58px)'});
+  $('#relax').css({'left':'calc(100% - 50px)'});
   $(this).replaceWith('<i class="fa fa-caret-left" id="expand"></i>');
   
 });
