@@ -385,9 +385,10 @@ function roundHalf(num) {
     var grand = numbers.pop();
     
      var grand2 = grand + '.jpg';
-if(grand == 3 || grand == 70 || grand == 80 || grand == 90 || grand == 97 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125 || grand == 145 || grand == 148 || grand == 152 || grand == 153 || grand == 161 || grand == 170 || grand == 146 || grand == 147 || grand == 66 || grand == 68){
-  $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
-
+    if(grand == 3){
+      $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/100.mp4" type="video/mp4"></video></figure></div>');
+    }else if(grand == 70 || grand == 80 || grand == 90 || grand == 97 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125 || grand == 145 || grand == 148 || grand == 152 || grand == 153 || grand == 161 || grand == 170 || grand == 146 || grand == 147 || grand == 66 || grand == 68 || grand == 187){
+      $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
     }else{
       $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>');
     }
@@ -629,7 +630,7 @@ function arrayShuffle () {
 Array.prototype.shuffle =arrayShuffle;
     
 var start = 1;
-var end = 180;
+var end = 190;
 var numbers = new Array(); 
 for (var i = start; i <= end; i++) {
     numbers.push(i);
@@ -641,7 +642,7 @@ var myAudio = document.getElementById('audio-player');
 var praise = "I'm impressed";
 
 switch(grand){
-  case 3: case 70: case 80: case 90: case 97: case 99: case 100: case 105: case 106: case 110: case 115: case 120: case 125: case 145: case 148: case 152: case 153: case 161: case 170: case 146: case 147: case 66: case 68:
+  case 3: case 70: case 80: case 90: case 97: case 99: case 100: case 105: case 106: case 110: case 115: case 120: case 125: case 145: case 148: case 152: case 153: case 161: case 170: case 146: case 147: case 66: case 68: case 187:
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
   break;
   default:
