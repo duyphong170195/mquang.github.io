@@ -387,7 +387,7 @@ function roundHalf(num) {
      var grand2 = grand + '.jpg';
     if(grand == 3 || grand == 197 || grand == 198){
       $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/100.mp4" type="video/mp4"></video></figure></div>');
-    }else if(grand == 70 || grand == 80 || grand == 90 || grand == 97 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125 || grand == 145 || grand == 148 || grand == 152 || grand == 153 || grand == 161 || grand == 170 || grand == 146 || grand == 147 || grand == 66 || grand == 68 || grand == 187 || grand == 193){
+    }else if(grand == 70 || grand == 80 || grand == 90 || grand == 97 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125 || grand == 145 || grand == 148 || grand == 152 || grand == 153 || grand == 161 || grand == 170 || grand == 146 || grand == 147 || grand == 66 || grand == 68 || grand == 187 || grand == 193 || grand == 117 || grand == 123 || grand == 56 || grand == 144 || grand == 201){
       $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
     }else{
       $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>');
@@ -519,7 +519,7 @@ $('.butt,.display a').addClass('rainbow');
 function getRand(bottom, top) {  
   return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
 }
-var result = getRand(1,15);
+var result = getRand(1,17);
 var iDiv = document.createElement('div');
 iDiv.id = 'relax';
 document.getElementsByTagName('body')[0].appendChild(iDiv);
@@ -542,7 +542,16 @@ $(document).on('click','#expand',function(){
      $('#relax').css('left','0');
      $(this).replaceWith('<i class="fa fa-caret-right" id="collapse"></i>');
   });
-for(var i = 1; i<=16; i++){
+$(document).on('click','#collapse2',function(){
+  $('.cover').css({'left':'calc(100% - 50px)'});
+  $(this).replaceWith('<i class="fa fa-caret-left" id="expand2"></i>');
+  
+});
+$(document).on('click','#expand2',function(){
+     $('.cover').css('left','0');
+     $(this).replaceWith('<i class="fa fa-caret-right" id="collapse2"></i>');
+  });
+for(var i = 1; i<=17; i++){
     $('#relax select').append('<option value="' + i +'">' + i + '.mp3</option>')
 }
 $('#relax select').val(result);
@@ -630,7 +639,7 @@ function arrayShuffle () {
 Array.prototype.shuffle =arrayShuffle;
     
 var start = 1;
-var end = 200;
+var end = 201;
 var numbers = new Array(); 
 for (var i = start; i <= end; i++) {
     numbers.push(i);
@@ -642,7 +651,7 @@ var myAudio = document.getElementById('audio-player');
 var praise = "I'm impressed";
 
 switch(grand){
-  case 3: case 197: case 198: case 70: case 80: case 90: case 97: case 99: case 100: case 105: case 106: case 110: case 115: case 120: case 125: case 145: case 148: case 152: case 153: case 161: case 170: case 146: case 147: case 66: case 68: case 187: case 193:
+  case 3: case 197: case 198: case 70: case 80: case 90: case 97: case 99: case 100: case 105: case 106: case 110: case 115: case 120: case 125: case 145: case 148: case 152: case 153: case 161: case 170: case 146: case 147: case 66: case 68: case 187: case 193: case 117: case 123: case 56: case 144: case 201:
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
   break;
   default:
@@ -710,9 +719,17 @@ switch(grand){
       vid.load();
     }
   }
-
+  var fl = false;
   $('.btn-primary').on('click',function(){
-     $('.panel-body p').show();
+    if(fl == false){
+      $('.btn-primary').text("Ẩn nội dung (luyện nghe)");
+      fl = true;
+    }else{
+      $('.btn-primary').text("Hiển thị nội dung");
+      fl = false;
+    }
+      
+     $('.panel-body p').toggle();
   });
 var iWidth = $('#m td:nth-child(4) iframe').width();
 $('#m td:nth-child(4) iframe').css({'margin-bottom':'20px','height':iWidth*9/16});

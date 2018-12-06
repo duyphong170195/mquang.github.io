@@ -5,9 +5,12 @@ $(document).ready(function(){
 }
 $('.panel-body p').each(function(i) {
         var a = $(this).html();
-        var b = a.split(':')[0];
-        var result1 = boldString(a, b); 
-        $(this).html(result1);  
-        $(this).css('text-indent','0');  
+        if(a.includes(":")){
+          var b = a.split(':')[0];
+          var result1 = boldString(a, b); 
+          $(this).html(result1);  
+          $(this).css('text-indent','0');  
+        }
+        
  });
 });

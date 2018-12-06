@@ -2,13 +2,19 @@
 <link rel="stylesheet" href="../libraries\bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../libraries\main.css">
-<script type="text/javascript" src="../libraries\throwable.js"></script>
-<script type="text/javascript" src="../libraries\srv.js"></script>
-<link rel="stylesheet" href="../libraries\srv.css">
-<div class="box o-2 element">acquisition (ngày 32)</div>
-<div class="box o-3 element">govern (ngày 26)</div>
-<div class="box o-4 element">in particular (ngày 18)</div>
-<div class="box o-4 element">nation (ngày 66)</div>
+<link rel="stylesheet" href="../libraries\matching.css">
+<div class="wrapTest">
+<section id="test">
+<div class="alert alert-info"><i class="fa fa-edit" style="font-size: 20px"></i> Để mở bài hôm nay, trước tiên bạn cần chọn từ ở nửa trái sao cho khớp với nghĩa ở nửa phải. Bài sẽ mở khi bạn ghép được hết 6 cặp từ này.</div>
+ <ul id="terms">
+ </ul>
+ <ul id="defs">
+ </ul>
+ <button id="resetRV">RESET</button>
+ <button id="exitRV">Đóng</button>
+</section>
+
+</div>
 <div class="all">
   <div class="layer2">
   <div class="butt btn btn-success btn-lg"><i class="fa fa-bars"></i>Xem ngày khác</div>
@@ -23,56 +29,60 @@
     </thead>
     <tbody>
       <tr>
-        <td></td>
-        <td></td>
-        <td><br><a href="../images2\"><img src="../images2\" /></a></td>
-        <td><li></li></td>
+        <td>landlord</td>
+        <td>/ˈlænd.lɔːrd/</td>
+        <td>(n) <b>ông chủ nhà</b> (a man who <select><option>rents</option><option>leases</option></select> a room, building, or piece of land to someone)</td>
+        <td><li>The landlord says he wants to raise the rent.<li>Heather's landlord lowered her rent when she said she might move out.</li><div class="note"><li><b>(n) <dfn class="ol">landlady</dfn>: bà chủ nhà</b><br><a href="../images2\255.jpg"><img src="../images2\255.jpg" /></a></li></div></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td><br><a href="../images2\"><img src="../images2\" /></a></td>
-        <td><li></li></td>
+        <td>intervene</td>
+        <td>/ˌɪn.təˈviːn/</td>
+        <td>(v)<br><b>1. can thiệp</b><br><a href="../images2\256.gif"><img src="../images2\256.gif" /></a><br><br><b>2. xen vào, ngắt lời</b> (to interrupt someone when they are speaking)</td>
+        <td>1.<br><li>The army will have to intervene to <dfn data-inf="(v) ngăn chặn, ngăn ngừa">prevent</dfn> further fighting.<li>The police don’t usually like to intervene in disputes between husbands and wives.<li>She might have been killed if the neighbours hadn't intervened.<li>The teacher was <dfn data-inf="(adj) bị thương">injured</dfn> when she tried to intervene in the fight between the two male students.<li>The <u title="ngày 94">situation</u> calmed down when police intervened.</li><a href="../images2\258.gif"><img src="../images2\258.gif" /></a><br><br>2.<br><li>‘Stop <dfn data-inf="(gerund) la hét">shouting</dfn>, Emily, ’ John intervened.<li>'I've told you he's not here,' Irena intervened.</li></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td><br><a href="../images2\"><img src="../images2\" /></a></td>
-        <td><li></li></td>
+        <td>burgle</td>
+        <td>/ˈbɝː.ɡəl/</td>
+        <td>(v, UK) <b>ăn trộm</b> (to enter a building illegally and steal things)</td>
+        <td><li>After her house was burgled, she made a claim on her insurance.<li>He went out <b>burgling</b> nearly every night to support his drugs habit.<li>When they got back from their holiday they found that their home had been burgled.</li><div class="note"><li><b>(v, US) <dfn class="ol">burglarize</dfn>: ăn trộm</b></li></div><div class="note"><li><b>(n) <dfn class="ol">burglar</dfn>: kẻ trộm</b> (someone who goes into houses, shops etc to steal things)<br><a href="../images2\257.jpg"><img src="../images2\257.jpg" /></a></li></div><li>Tom <dfn data-inf="bị bắn">was shot</dfn> when he surprised the <b>burglars</b>.<li>The <b>burglars</b> <dfn data-inf="(v-ed) vô hiệu hóa, ngắt">disabled</dfn> the alarm and used a <dfn data-inf="(n) dụng cụ cắt kính">glass cutter</dfn> to <dfn data-inf="(ph.v) đột nhập">break into</dfn> the house.</li></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td><br><a href="../images2\"><img src="../images2\" /></a></td>
-        <td><li></li></td>
+        <td>crisis</td>
+        <td>/ˈkraɪ.sɪs/</td>
+        <td>(n) <b>khủng hoảng</b> (a situation that is extremely difficult or dangerous, when there are many problems)</td>
+        <td><li><select><option>economic</option><option>financial</option><option>energy</option></select> crisis<li><dfn data-inf="(adj) chính trị">political</dfn> crisis<li>The Government is doing nothing to intervene in the crisis.</li></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td><br><a href="../images2\"><img src="../images2\" /></a></td>
-        <td><li></li></td>
+        <td>require</td>
+        <td>/rɪˈkwaɪ.ər/</td>
+        <td>(v) <b>yêu cầu, đòi hỏi, cần</b></td>
+        <td><li><u title="ngày 15">Regulations</u> require that students attend at least 90% of the lectures.<li>The job requires a college degree and a knowledge of computers.<li>She requires surgery on her hip.<li>Children under 17 require an <dfn data-inf="cha mẹ đi theo">accompanying parent</dfn> or <dfn data-inf="(n) người giám hộ">guardian</dfn> to see this film.<li>Do you require anything else?<li>Please call this number if you require any further information.</li><a href="../images2\254.png"><img src="../images2\254.png" /></a><br><br><div class="note"><li><b>(n) <dfn class="ol">requirement</dfn>: nhu cầu, yêu cầu, điều kiện</b> (something that is needed)</li></div><li>the basic <b>requirement</b>s of life<li>A good degree is a minimum <b>requirement</b> for many jobs.<li>The design has been <u title="ngày 54">adapted</u> to meet customer <b>requirement</b>s.<li>I am not quite sure if we can meet your <b>requirement</b>s.<li><u title="môn điều kiện">English 4 is a <b>requirement</b></u> for English majors.</li></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td><br><a href="../images2\"><img src="../images2\" /></a></td>
-        <td><li></li></td>
+        <td>should</td>
+        <td>/ʃʊd/</td>
+        <td>(modal verb)<br><b>1. nên</b> (used to give or ask for advice)<br><br><b>2. đáng lẽ, đáng ra; hoặc diễn tả điều được mong đợi</b> (used to show when something is likely or expected)<br><br><b>3. nếu</b> (used when referring to a <dfn data-inf="sự kiện có thể xảy ra">possible event</dfn> in the future)</td>
+        <td>1.<br><li>What should I do?<li>Should I trust him?<li>You should read his new book.<li>You should tell him what you think.</li><br>2.<br><li>It should be a nice day tomorrow.<li>I wonder what's happened to Annie. She should be here by now.<li>"Could you have the report ready by Friday?" "Yes, I should think so."<li>Try phoning Robert – he should be home by now.<li>It was an easy test and he should <b>have</b> pass<u>ed</u>, but he didn’t.<li>His plane should <b>have</b> arriv<u>ed</u> by now (= if everything is fine, the plane has arrived).<li>It should probably be sunny at that time of year.<li>I <b>should've</b> bought more milk.<li>You <b>should've</b> come to the party last night, Manya.</li><video controls>
+  <source src="../videos\vid98a.mp4" type="video/mp4">
+</video><br><br><div class="alert alert-info"><b>should have + p2</b> ngoài diễn tả điều được expected, nó còn được dùng để diễn tả <u title="ngày 80">regret</u></div><li>I <b>shouldn't have</b> shouted at you. I apologise.<li>I <b>should have</b> sent him an invitation.<li>I <b>should have known</b> you would do that.</li><a href="../images2\338.png"><img src="../images2\338.png" /></a><br><br><video controls>
+  <source src="../videos\vid98b.mp4" type="video/mp4">
+</video><span>YouTube: JForrest English</span><br>3.<br><li><b>Should</b> you need any help (=if you need any help), you can always phone me at the office.<li><b>Should</b> you (= if you) ever need anything, please don't hesitate to contact me.<li><b>Should</b> you decide not to go on the trip, you will get a full refund.</li></td>
       </tr>        
     </tbody>
 
   </table>
 </article>
 <div class="audio panel panel-primary">
-  <div class="panel-heading">Luyện nghe</div>
+  <div class="panel-heading">Luyện nghe (Bài hôm nay giọng Anh-Anh)</div>
   <div class="panel-body">
     <audio controls>
       <source src="../audio\d98.mp3" type="audio/mpeg">
     </audio>
       <button type="button" class="btn btn-primary">Hiển thị nội dung</button>
-<p>Good morning everyone. I’m Kerry Wilson, one of the student welfare team, and I’m going to talk to you about how to deal with some of the difficulties that may arise while you’re studying with us. Of course we hope that you won’t experience any problems during your studies, but it’s good to know what help is available should anything go wrong.</p>
-<p>I know some of you have had a problem opening a bank account and that you are anxious about paying your course fees. If you’re in this predicament, don’t worry. To open an account you need to present evidence that you are enrolled on a full-time course. Just go to the Language Centre office and ask for a letter of enrolment. As long as you have registered for the course, you can get a letter. You don’t need to have paid your fees.</p>
-<p>For those of you who are living in private accommodation, we would advise you to speak to one of the student welfare team before signing a lease. Sometimes disputes can arise, for example in relation to damage to property. If you have a disagreement with your landlord, one of the welfare team can intervene if necessary.</p>
-<p>Finally, the student welfare office can be phoned at any time during the day or night in case of an emergency. If your room is burgled for example, do not hesitate to phone the emergency number in your welfare handbook. This type of crisis is very rare, but please be assured that help is available should you require it.</p>
+<p>Good morning everyone. I’m Kerry Wilson, one of the student <mark>welfare</mark> team, and I’m going to talk to you about how to <i><b>deal with</b></i> some of the difficulties that may <u title="ngày 49">arise</u> while you’re studying with us. Of course we hope that you won’t <u title="ngày 19">experience</u> any problems during your studies, but it’s good to know what help is available <mark>should</mark> anything go wrong.</p>
+<p>I know some of you have had a problem opening a bank account and that you are <mark>anxious</mark> about paying your course <u title="ngày 92">fees</u>. If you’re in this <mark>predicament</mark>, don’t worry. To open an account you need to present <u title="ngày 41">evidence</u> that you are <mark>enrolled</mark> on a full-time course. Just go to the Language Centre office and ask for a letter of <mark>enrolment</mark>. <u title="ngày 4">As long as</u> you have <mark>registered</mark> for the course, you can get a letter. You don’t need to pay your fees.</p>
+<p>For those of you who are living in private <u title="ngày 8">accommodation</u>, we would <mark>advise</mark> you to speak to one of the student welfare team before signing a <u title="ngày 25">lease</u>. Sometimes <mark>disputes</mark> can arise, for example in relation to damage to <u title="ngày 83">property</u>. If you have a <u title="ngày 46">disagreement</u> with your <mark>landlord</mark>, one of the welfare team can <mark>intervene</mark> if necessary.</p>
+<p>Finally, the student welfare office can <u title="">be phoned</u> at any time during the day or night in case of an <u title="ngày 53">emergency</u>. If your room <mark>is burgled</mark> for example, do not <u title="ngày 93">hesitate</u> to phone the emergency number in your welfare handbook. This type of <mark>crisis</mark> is very rare, but please be <u title="ngày 21">assured</u> that help is <u title="ngày 61">available</u> <mark>should</mark> you <mark>require</mark> it.</p>
   </div>
   
 </div>
@@ -189,3 +199,60 @@
   </div>
 </div>
 <script type="text/javascript" src="../libraries\main.js"></script>
+<script type="text/javascript">
+  var data = {
+    terms: [{
+        index: 0,
+        text: "assure (ngày 21)"
+      }, {
+        index: 1,
+        text: "arise (ngày 49)"
+      }, {
+        index: 2,
+        text: "mutual (ngày 2)"
+      }, {
+        index: 3,
+        text: "competent (ngày 19)"
+      }, {
+        index: 4,
+        text: "socialize (ngày 17)"
+      }, {
+        index: 5,
+        text: "specialize (ngày 18)"
+      },
+
+    ],
+    definitions: [{
+        index: 0,
+        text: "to promise or tell something to someone confidently or firmly, or to cause someone to feel certain by removing doubt"
+      }, {
+        index: 1,
+        text: "to happen"
+      }, {
+        index: 2,
+        text: "used to describe feelings that two or more people have for each other equally, or actions that affect two or more people equally"
+      }, {
+        index: 3,
+        text: "having enough skill or knowledge to do something well or to the necessary standard"
+      }, {
+        index: 4,
+        text: "to spend time with other people in a friendly way"
+      }, {
+        index: 5,
+        text: "concentrate on and become expert in a particular subject or skill"
+      },
+
+    ],
+    //this creates matches for indexes. This is a sort of an Answer Sheet
+    pairs: {
+      0: 0,
+      1: 1,
+      2: 2,
+      3: 3,
+      4: 4,
+      5: 5,
+    }
+  };
+</script>
+<script type="text/javascript" src="../libraries\matching.js"></script>
+
