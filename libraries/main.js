@@ -1,5 +1,5 @@
 $('body').append('<i class="fa fa-chevron-circle-up" style="font-size:36px" onclick="topFunction()"></i>')
-$('.layer2').prepend('<a href="https://mquang.github.io" class="btn btn-default btn-md home"><i class="fa fa-th"></i> Trang chủ</a>')
+$('.layer2').prepend('<a href="../index.html" class="btn btn-default btn-md home"><i class="fa fa-th"></i> Trang chủ</a>')
 $('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm" checked><label for="lm">Em chưa 16 (đừng bỏ tích nếu bạn là nữ hoặc nam dưới 16 tuổi)</label></div>')
 if($("dfn.ol").closest('div').length >= 1){
   $('.container_q').append('<div class="qbo" id="diff"><input type="checkbox" id="qbo"><label for="qbo">Tăng độ khó (thêm các họ từ liên quan)</label></div>');
