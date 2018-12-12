@@ -16,19 +16,20 @@
   top: 30px;
   margin: 0 auto;
   width: 100%;
-  height: 90%;
+  height: 600px;
 }
 
 .wrapTest ul {
   list-style: none;
   width: 50%;
+  max-width: 660px;
   font-size: 0.75em;
   position: absolute;
   padding: 10px;
 }
 
 .wrapTest ul#terms {
-  left: 0px;
+  left: calc(50% - 660px);
 }
 .wrapTest .alert{width:970px;margin: auto}
 .wrapTest ul#defs {
