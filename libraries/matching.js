@@ -1,4 +1,6 @@
 //Execute a JavaScript immediately after a page has been loaded
+$(document).ready(function(){
+
 
 var count = 0;
   //Data for terms and definitions. This can be stored in a separate .js file, in a JSON file or here in the main file
@@ -22,10 +24,10 @@ var count = 0;
       //OR shorter version: container.innerHTML += "<li data-index='" + list[i]["index"] + "'>" + list[i]["text"] + "</li>";
     }
   }
-window.onload = function() {
+//window.onload = function() {
   createListHTML(data.terms, termsContainer);
   createListHTML(data.definitions, defsContainer);
-}
+//}
   //listen for a "click" event on a list of Terms and store the clicked object in the target object
   termsContainer.addEventListener("click", function(e) {
     var target = e.target.parentNode;
@@ -162,3 +164,4 @@ window.onload = function() {
   document.getElementById("exitRV").addEventListener("click", function() {
     $('.wrapTest').hide();
   });
+});
