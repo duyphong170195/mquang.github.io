@@ -734,7 +734,7 @@ switch(grand){
 var iWidth = $('#m td:nth-child(4) iframe').width();
 $('#m td:nth-child(4) iframe').css({'margin-bottom':'20px','height':iWidth*9/16});
 
-
+$('#m a, .container2 a').attr('target','_blank');
 
 
 

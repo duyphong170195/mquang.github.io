@@ -164,4 +164,14 @@ var count = 0;
   document.getElementById("exitRV").addEventListener("click", function() {
     $('.wrapTest').hide();
   });
+  var mang = [];
+$('#terms li span').each(function(){
+  var r = /\d+/;
+  var getString = $(this).text();
+  var getNumber = $(this).text().match(r);
+  var result = getString.replace(getNumber, '<a href="../Tuan'+Math.ceil(getNumber/7)+'/day'+getNumber+'.html" target="_blank">'+getNumber+'</a>');
+  $(this).html(result);
+});
+
+
 });

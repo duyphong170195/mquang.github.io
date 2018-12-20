@@ -2,6 +2,19 @@
 <link rel="stylesheet" href="../libraries\bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../libraries\main.css">
+<link rel="stylesheet" href="../libraries\matching.css">
+<div class="wrapTest">
+<section id="test">
+<div class="alert alert-info"><i class="fa fa-edit" style="font-size: 20px"></i> Để mở bài hôm nay, trước tiên bạn cần chọn từ ở nửa trái sao cho khớp với nghĩa ở nửa phải. Bài sẽ mở khi bạn ghép được hết 6 cặp từ này.</div>
+ <ul id="terms">
+ </ul>
+ <ul id="defs">
+ </ul>
+ <button id="resetRV">RESET</button>
+ <button id="exitRV">Đóng</button>
+</section>
+
+</div>
 <div class="all">
   <div class="layer2">
   <div class="butt btn btn-success btn-lg"><i class="fa fa-bars"></i>Xem ngày khác</div>
@@ -118,4 +131,61 @@
   </div>
 </div>
 <script type="text/javascript" src="../libraries\main.js"></script>
+<script type="text/javascript">
+  var data = {
+    terms: [{
+        index: 0,
+        text: "(v) constitute"
+      }, {
+        index: 1,
+        text: "(v) incorporate"
+      }, {
+        index: 2,
+        text: "(n) institute"
+      }, {
+        index: 3,
+        text: "(v) cooperate"
+      }, {
+        index: 4,
+        text: "(n) corporation"
+      }, {
+        index: 5,
+        text: "(adj) collaborative"
+      },
+
+    ],
+    definitions: [{
+        index: 0,
+        text: "= (phrasal verb) make up<br>- to combine together to form something larger"
+      }, {
+        index: 1,
+        text: "- to include something<br>- to create a <dfn data-inf='(adv) hợp pháp'>legally</dfn> <dfn data-inf='(adj) được&#13;&#10;công nhận'>recognized</dfn> company"
+      }, {
+        index: 2,
+        text: "an organization where people do a particular type of scientific, educational, or social work, or the building used by this organization"
+      }, {
+        index: 3,
+        text: "= collaborate<br>- to work together with somebody in order to produce or achieve something"
+      }, {
+        index: 4,
+        text: "a large company or group of companies that is controlled together as a single organization"
+      }, {
+        index: 5,
+        text: "involving two or more people or organizations working together for a <dfn data-inf='mục đích cụ thể'>particular purpose</dfn>"
+      },
+
+    ],
+    //this creates matches for indexes. This is a sort of an Answer Sheet
+    pairs: {
+      0: 0,
+      1: 1,
+      2: 2,
+      3: 3,
+      4: 4,
+      5: 5,
+    }
+  };
+</script>
+<script type="text/javascript" src="../libraries\matching.js"></script>
+
 
