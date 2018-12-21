@@ -151,6 +151,7 @@ var count = 0;
   shuffle();
   document.getElementById("resetRV").addEventListener("click", function() {
     reset();
+    count = 0;
     termsContainer.setAttribute("class", "fadeOut");
     defsContainer.setAttribute("class", "fadeOut");
     setTimeout(function() {
