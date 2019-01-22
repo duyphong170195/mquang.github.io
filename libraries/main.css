@@ -710,9 +710,9 @@ h1{color:white;}
 .dropdown-btn h3:hover{
   background: black;
 }
-.current{background: black;padding-top: 5px;height: 440px;position: relative;margin-top: 20px}
+.current{background: black;padding-top: 5px;height: 450px;position: relative;margin-top: 20px}
 .dropdown-btn.visible{
-    height: 495px;
+    height: 510px;
    transition-property: height;  
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.85);
@@ -1252,3 +1252,25 @@ tr{vertical-align: top;}
     cursor: pointer;
     color: black;
   }
+
+  .fixed-video{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    margin-left: -160px;
+    width: 320px;
+    height: 180px;
+  }
+  .box{
+    margin-top: 15px;
+  }
+  #myVideo .close{
+    font-size: 30px;
+    position: absolute;
+    right: -25px;
+    top: 0;
+    display: none;
+  }
+
+  li{line-height: 25px;}

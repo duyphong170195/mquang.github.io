@@ -1,6 +1,7 @@
 $('body').append('<i class="fa fa-chevron-circle-up" style="font-size:36px" onclick="topFunction()"></i>')
 $('.layer2').prepend('<a href="../index.html" class="btn btn-default btn-md home"><i class="fa fa-th"></i> Trang chủ</a>')
 $('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm" checked><label for="lm">Em chưa 16 (đừng bỏ tích nếu bạn là nữ hoặc nam dưới 16 tuổi)</label></div>')
+$('#m a, .container2 a, #m td:nth-child(4) a').attr('target','_blank');
 if($("dfn.ol").closest('div').length >= 1){
   $('.container_q').append('<div class="qbo" id="diff"><input type="checkbox" id="qbo"><label for="qbo">Tăng độ khó (thêm các họ từ liên quan)</label></div>');
 }
@@ -56,12 +57,13 @@ var ar = [
   var str2 = oristr.replace(mySubString,"");
   var str3 = str2.replace('<dfn class="ol"></dfn>',"");
   var str4 = str3.replace('<li><b>',"");
-  var str5 = str4.replace('</b></li>',"");
+  var str5 = str4.replace('</b>',"");
+  var str6 = str5.replace('</li>',"");
   //console.log(str5);
   $('#qbo').bind('change', function(){        
     if($(this).is(':checked') == true){
       QUIZ_ANSWERS.push(mySubString);
-      sulist.push(str5);
+      sulist.push(str6);
     }
     
     $('.items').find('*').not('h2').remove();
@@ -82,6 +84,7 @@ for(var id1 = 0; id1 < sulist.length; id1 ++){
 $('td:nth-child(3)', '#m').each(function(i) {
       id1 ++;
       var b = $(this).html();
+      console.log(b);
       if(b !== ''){
         sulist.push(b); 
       }
@@ -250,7 +253,7 @@ function roundHalf(num) {
       var temp2 = temp1.replace('</b>',"");
       var temp3 = temp2.replace(mySubString,"");
       var temp4 = temp3.replace('<dfn class="ol"></dfn>',"");
-      //console.log(temp4);
+      console.log(temp4);
           $('label','.items').each(function(i) {
             var b = $(this).html();
             
@@ -385,9 +388,9 @@ function roundHalf(num) {
     var grand = numbers.pop();
     
      var grand2 = grand + '.jpg';
-    if(grand == 3 || grand == 197 || grand == 198){
+    if(grand == 3 || grand == 198){
       $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/100.mp4" type="video/mp4"></video></figure></div>');
-    }else if(grand == 70 || grand == 80 || grand == 90 || grand == 97 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125 || grand == 145 || grand == 148 || grand == 152 || grand == 153 || grand == 161 || grand == 170 || grand == 146 || grand == 147 || grand == 66 || grand == 68 || grand == 187 || grand == 193 || grand == 117 || grand == 123 || grand == 56 || grand == 144 || grand == 201 || grand == 79){
+    }else if(grand == 70 || grand == 80 || grand == 90 || grand == 97 || grand == 99 || grand == 100 || grand == 105 || grand == 106 || grand == 110 || grand == 115 || grand == 120 || grand == 125 || grand == 145 || grand == 148 || grand == 152 || grand == 153 || grand == 161 || grand == 170 || grand == 146 || grand == 147 || grand == 66 || grand == 68 || grand == 187 || grand == 193 || grand == 117 || grand == 123 || grand == 56 || grand == 144 || grand == 201 || grand == 79 || grand == 197 || grand == 63){
       $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
     }else{
       $('div.gallery').replaceWith('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><img id="gImg" src="../gift/'+grand2+'"/></figure></div>');
@@ -530,7 +533,8 @@ sound.controls = 'controls';
 sound.src      = '../music/' + result + '.mp3';
 sound.loop = true;
 sound.load();
-$('li u').parent().css('line-height','25px');
+
+
 $('#relax').append('<div id="pli"><span><i class="fa fa-caret-right" id="collapse"></i> Nhạc nền:</span><select id="sel1"></select></div><div class="love"><p>Made with <img src="../images/love.png" /> by <a href="https://www.facebook.com/nmquang.hust" target="_blank"> Minh Quang </a></p></div>');
 
 $(document).on('click','#collapse',function(){
@@ -651,7 +655,7 @@ var myAudio = document.getElementById('audio-player');
 var praise = "I'm impressed";
 
 switch(grand){
-  case 3: case 197: case 198: case 70: case 80: case 90: case 97: case 99: case 100: case 105: case 106: case 110: case 115: case 120: case 125: case 145: case 148: case 152: case 153: case 161: case 170: case 146: case 147: case 66: case 68: case 187: case 193: case 117: case 123: case 56: case 144: case 201: case 79:
+  case 3: case 197: case 198: case 70: case 80: case 90: case 97: case 99: case 100: case 105: case 106: case 110: case 115: case 120: case 125: case 145: case 148: case 152: case 153: case 161: case 170: case 146: case 147: case 66: case 68: case 187: case 193: case 117: case 123: case 56: case 144: case 201: case 79: case 63:
   $('body').append('<div class="gallery" style="display:none"><figure><figcaption>'+praise+' <i class="fa fa-heart" style="color: #c90a0a;font-size: 25px;"></i> <small>Stay patient and keep up the good work.</small></figcaption><video id="gift" controls loop><source src="../gift/'+grand+'.mp4" type="video/mp4"></video></figure></div>');
   break;
   default:
@@ -734,7 +738,7 @@ switch(grand){
 var iWidth = $('#m td:nth-child(4) iframe').width();
 $('#m td:nth-child(4) iframe').css({'margin-bottom':'20px','height':iWidth*9/16});
 
-$('#m a, .container2 a').attr('target','_blank');
+
 
 
 
