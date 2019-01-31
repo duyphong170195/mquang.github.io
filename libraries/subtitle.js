@@ -9,7 +9,7 @@ var countau = 0;
       $('.panel-primary p').show();
       $('#myVideo .close').css('display','block');
    }else{
-    alert('Bạn còn chưa thử nghe hết một lần mà! Nghe đi xem sức mình nghe được đến đâu.');
+    alert('Bạn còn chưa thử nghe hết một lần mà! Nghe đi xem sức mình hiện tại nghe hiểu được bao nhiêu. Sau khi nghe xong lần 1, bạn sẽ có thể mở được phụ đề.');
   }
 
 });
