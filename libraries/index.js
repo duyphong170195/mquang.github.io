@@ -34,7 +34,11 @@ for(var i=1; i<=15;i++){
 }
 for(var i=16; i<=tuan;i++){
   var temp = i - 1;
-  $('.gallery#three').append('<div class="thumbnail" id="w'+temp+'"><span class="folder"><span class="file"></span></span><div class="title">Tuần '+i+'</div></div>');
+  if(temp == 17){
+    $('.gallery#three').append('<div class="thumbnail" id="w'+temp+'"><span class="folder"><span class="file"></span></span><div class="title">Tuần '+i+' <i class="em em-email"></i></div></div>');
+  }else{
+    $('.gallery#three').append('<div class="thumbnail" id="w'+temp+'"><span class="folder"><span class="file"></span></span><div class="title">Tuần '+i+'</div></div>');
+  }
 }
   $('.thumbnail').click(function(){
      var id = $(this).attr('id');
