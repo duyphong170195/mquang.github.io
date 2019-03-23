@@ -79,9 +79,9 @@ type("ACCESSING DATA .....")
   .then("Day 21: " + bag[6].join(', '))
   .wait(1000)
   .then("Show related words? Press y/n")
-
-$(document).one('keypress', function(e) {
-    if ( e.which === 121) {
+var flag = true;
+$(document).on('keypress', function(e) {
+    if ( e.which === 121 && flag == true) {
       type("Day 15: " + bonus[0].join(', '))
       .wait(1000)
       .then("Day 16: " + bonus[1].join(', '))
@@ -94,9 +94,11 @@ $(document).one('keypress', function(e) {
       .wait(1000)
       .then("Day 20: " + bonus[5].join(', '))
       .wait(1000)
-      .then("Day 21: " + bonus[6].join(', '))
-    }else if(e.which === 110){
-      type("Keep calm & Have fun with English ^^")
+      .then("Day 21: " + bonus[6].join(', '));
+      flag = false;
+    }else if(e.which === 110 && flag == true){
+      type("Keep calm & Have fun with English ^^");
+      flag = false;
     }    
 });
   
