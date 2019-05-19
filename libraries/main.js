@@ -1,6 +1,8 @@
 $('body').append('<i class="fa fa-chevron-circle-up" style="font-size:36px" onclick="topFunction()"></i>')
 $('.layer2').prepend('<a href="../index.html" class="btn btn-default btn-md home"><i class="fa fa-th"></i> Trang chủ</a>')
-$('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm"><label for="lm">Thêm tính năng dành riêng cho nam trên 16 tuổi (Cảnh báo 16+)</label></div>')
+
+$('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm"><label for="lm">Thêm tính năng dành riêng cho nam trên 16 tuổi (Cảnh báo 16+)</label></div>');
+
 $('#m a, .container2 a, #m td:nth-child(4) a').attr('target','_blank');
 if($("dfn.ol").closest('div').length >= 1){
   $('.container_q').append('<div class="qbo" id="diff"><input type="checkbox" id="qbo"><label for="qbo">Tăng độ khó (thêm các họ từ liên quan)</label></div>');
@@ -84,7 +86,7 @@ for(var id1 = 0; id1 < sulist.length; id1 ++){
 $('td:nth-child(3)', '#m').each(function(i) {
       id1 ++;
       var b = $(this).html();
-      console.log(b);
+      //console.log(b);
       if(b !== ''){
         sulist.push(b); 
       }
@@ -253,7 +255,7 @@ function roundHalf(num) {
       var temp2 = temp1.replace('</b>',"");
       var temp3 = temp2.replace(mySubString,"");
       var temp4 = temp3.replace('<dfn class="ol"></dfn>',"");
-      console.log(temp4);
+      //console.log(temp4);
           $('label','.items').each(function(i) {
             var b = $(this).html();
             

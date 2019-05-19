@@ -193,5 +193,4 @@ $('#terms li span').each(function(){
   $(this).html(result);
 });
 
-
 });

@@ -1274,3 +1274,8 @@ tr{vertical-align: top;}
   }
 
   li{line-height: 25px;}
+  @media only screen and (max-width: 600px){
+    .qbo #limit{
+      display: none;
+    }
+  }
