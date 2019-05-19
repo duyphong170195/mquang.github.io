@@ -163,16 +163,4 @@
   color:black;
   text-decoration: none;
 }
-@media only screen and (max-width: 600px){
-  .wrapTest ul#terms{
-    left: calc(50% - 350px);
-  }
-  .wrapTest button#exitRV {
-    left: calc(60% + 120px);
-    bottom: -460px;
-  }
-  .wrapTest button#resetRV {
-    left: 60%;
-    bottom: -460px;
-}
-}
+
