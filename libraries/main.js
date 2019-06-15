@@ -741,6 +741,139 @@ var iWidth = $('#m td:nth-child(4) iframe').width();
 $('#m td:nth-child(4) iframe').css({'margin-bottom':'20px','height':iWidth*9/16});
 
 
+$(".panel-body p").wrapAll("<div id='test-text2'></div>");
+var editBlock =  '<div class="wrapPen"><div id="editpen"><span class="tooltiptext">Tích vào ô để bật tính năng chỉnh sửa:<br>- Chuột trái bôi đen những chỗ có nối âm, flap T (âm T đọc là Đ), âm cuối... để luyện nói:<br>+ Bôi đen 1 lần để highlight.<br>+ Bôi đen lần 2 vào phần đã bôi để bỏ highlight phần đó.</span><input id="editcheck" type="checkbox" /><span>Editable</span><img id="editpen" src="../images1/editpen.png"></div></div>';
+ if($(".panel-body video").length > 0){
+    $('.box').append(editBlock);
+  }else{
+    $('.panel-body').prepend(editBlock);
+  }
+if($(".panel-body .cover").length > 0){
+  $('.audio .panel-body').css('overflow', 'hidden');
+}
+
+mouseXPosition = 0;
+  $(document).ready(function () {
+      $('#editpen').on('click',function(){
+        if($('#editcheck').is(':checked') == true){
+          $('.exa').addClass('highlight');
+          $('.exa').removeClass('exa');
+          $('mark, .panel-body p u, .panel-body p i, .panel-body p b').contents().unwrap();
+          $("#test-text2").mousedown(function (e1) {
+          mouseXPosition = e1.pageX;//register the mouse down position
+      });
+$("#test-text2").mouseup(function (e2) {
+          var highlighted = false;
+          var selection = window.getSelection();
+          var selectedText = selection.toString();
+          var startPoint = window.getSelection().getRangeAt(0).startOffset;
+          var endPoint = window.getSelection().getRangeAt(0).endOffset;
+          var anchorTag = selection.anchorNode.parentNode;
+          var focusTag = selection.focusNode.parentNode;
+          if ((e2.pageX - mouseXPosition) < 0) {
+              focusTag = selection.anchorNode.parentNode;
+              anchorTag = selection.focusNode.parentNode;
+          }
+          if (selectedText.length === (endPoint - startPoint)) {
+              highlighted = true;
+
+              if (anchorTag.className !== "highlight") {
+                  highlightSelection();
+              } else {
+                  var afterText = selectedText + "<span class = 'highlight'>" + anchorTag.innerHTML.substr(endPoint) + "</span>";
+                  anchorTag.innerHTML = anchorTag.innerHTML.substr(0, startPoint);
+                  anchorTag.insertAdjacentHTML('afterend', afterText);
+              }
+
+          }else{
+              if(anchorTag.className !== "highlight" && focusTag.className !== "highlight"){
+                  highlightSelection();  
+                  highlighted = true;
+              }
+              
+          }
+
+
+          if (anchorTag.className === "highlight" && focusTag.className === 'highlight' && !highlighted) {
+              highlighted = true;
+
+              var afterHtml = anchorTag.innerHTML.substr(startPoint);
+              var outerHtml = selectedText.substr(afterHtml.length, selectedText.length - endPoint - afterHtml.length);
+              var anchorInnerhtml = anchorTag.innerHTML.substr(0, startPoint);
+              var focusInnerHtml = focusTag.innerHTML.substr(endPoint);
+              var focusBeforeHtml = focusTag.innerHTML.substr(0, endPoint);
+              selection.deleteFromDocument();
+              anchorTag.innerHTML = anchorInnerhtml;
+              focusTag.innerHTml = focusInnerHtml;
+              var anchorafterHtml = afterHtml + outerHtml + focusBeforeHtml;
+              anchorTag.insertAdjacentHTML('afterend', anchorafterHtml);
+
+
+          }
+
+          if (anchorTag.className === "highlight" && !highlighted) {
+              highlighted = true;
+  var Innerhtml = anchorTag.innerHTML.substr(0, startPoint);
+              var afterHtml = anchorTag.innerHTML.substr(startPoint);
+              var outerHtml = selectedText.substr(afterHtml.length, selectedText.length);
+              selection.deleteFromDocument();
+              anchorTag.innerHTML = Innerhtml;
+              anchorTag.insertAdjacentHTML('afterend', afterHtml + outerHtml);
+           }
+          
+          if (focusTag.className === 'highlight' && !highlighted) {
+              highlighted = true;
+  var beforeHtml = focusTag.innerHTML.substr(0, endPoint);
+              var outerHtml = selectedText.substr(0, selectedText.length - beforeHtml.length);
+              selection.deleteFromDocument();
+              focusTag.innerHTml = focusTag.innerHTML.substr(endPoint);
+              outerHtml += beforeHtml;
+              focusTag.insertAdjacentHTML('beforebegin', outerHtml );
+
+
+          }
+          if (!highlighted) {
+              highlightSelection();
+          }
+          $('.highlight').each(function(){
+              if($(this).html() == ''){
+                  $(this).remove();
+              }
+          });
+          selection.removeAllRanges();
+      });
+        }
+        else{return false;}
+
+      });
+
+      
+  });
+
+  function highlightSelection() {
+      var selection;
+
+      //Get the selected stuff
+      if (window.getSelection)
+          selection = window.getSelection();
+      else if (typeof document.selection != "undefined")
+          selection = document.selection;
+
+      //Get a the selected content, in a range object
+      var range = selection.getRangeAt(0);
+
+      //If the range spans some text, and inside a tag, set its css class.
+      if (range && !selection.isCollapsed) {
+          if (selection.anchorNode.parentNode == selection.focusNode.parentNode) {
+              var span = document.createElement('span');
+              span.className = 'highlight';
+              span.textContent = selection.toString();
+              selection.deleteFromDocument();
+              range.insertNode(span);
+//                        range.surroundContents(span);
+          }
+      }
+  }
 
 
 

@@ -1274,8 +1274,133 @@ tr{vertical-align: top;}
   }
 
   li{line-height: 25px;}
-  @media only screen and (max-width: 600px){
-    .qbo #limit{
-      display: none;
-    }
+
+ .highlight
+  {
+      background: yellow;
+      color:black;
   }
+.wrapPen{
+  float:right;
+}
+#editpen{
+  position:relative;
+  float:right;
+}
+.audio .panel-body{
+  overflow: visible;
+}
+#editpen .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: orange;
+    color: black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 99;
+    top: -5px;
+    right: 110%;
+}
+
+#editpen .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent orange;
+}
+#editpen:hover .tooltiptext {
+    visibility: visible;
+}
+#editpen img{width:50px;height:50px;}
+#editpen:hover img {
+  -webkit-animation-name: pencilMove;
+          animation-name: pencilMove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+
+#editpen:hover::after {
+  content: "";
+  position: absolute;
+  left:82px;
+  bottom: 0;
+  border-bottom: 4px solid yellow;
+  -webkit-animation-name: pencilLine;
+          animation-name: pencilLine;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+
+@-webkit-keyframes pencilMove {
+  0% {
+    -webkit-transform: rotate(0), translateX(0);
+            transform: rotate(0), translateX(0);
+  }
+  5% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  10% {
+    -webkit-transform: rotate(-10deg) translateX(0);
+            transform: rotate(-10deg) translateX(0);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg) translateX(1em);
+            transform: rotate(-10deg) translateX(1em);
+  }
+}
+
+@keyframes pencilMove {
+  0% {
+    -webkit-transform: rotate(0), translateX(0);
+            transform: rotate(0), translateX(0);
+  }
+  5% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  10% {
+    -webkit-transform: rotate(-10deg) translateX(0);
+            transform: rotate(-10deg) translateX(0);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg) translateX(1em);
+            transform: rotate(-10deg) translateX(1em);
+  }
+}
+@-webkit-keyframes pencilLine {
+  10% {
+    width: 0;
+  }
+  100% {
+    width: 1.1em;
+  }
+}
+@keyframes pencilLine {
+  10% {
+    width: 0;
+  }
+  100% {
+    width: 1.1em;
+  }
+}
