@@ -192,5 +192,6 @@ $('#terms li span').each(function(){
   var result = getString.replace(getNumber, '<a href="../Tuan'+Math.ceil(getNumber/7)+'/day'+getNumber+'.html" target="_blank">'+getNumber+'</a>');
   $(this).html(result);
 });
-
+$('.wrapTest ul li span:has(img)').css('padding','0');
+$('.wrapTest ul li span img, .wrapTest ul li span i').css('pointer-events','none');
 });
