@@ -194,4 +194,5 @@ $('#terms li span').each(function(){
 });
 $('.wrapTest ul li span:has(img)').css('padding','0');
 $('.wrapTest ul li span img, .wrapTest ul li span i').css('pointer-events','none');
+$('.wrapTest ul li span i dfn').css('pointer-events','auto');
 });
