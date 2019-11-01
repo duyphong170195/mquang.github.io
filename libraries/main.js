@@ -1,7 +1,7 @@
 $('body').append('<i class="fa fa-chevron-circle-up" style="font-size:36px" onclick="topFunction()"></i>')
 $('.layer2').prepend('<a href="../index.html" class="btn btn-default btn-md home"><i class="fa fa-th"></i> Trang chủ</a>')
 
-$('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm"><label for="lm">Thêm tính năng dành riêng cho nam trên 16 tuổi (Cảnh báo 16+)</label></div>');
+$('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm"><label for="lm">Thêm tính năng "vui chơi có thưởng" dành riêng cho các bạn nam (Cảnh báo 16+)</label></div>');
 
 $('#m a, .container2 a, #m td:nth-child(4) a').attr('target','_blank');
 if($("dfn.ol").closest('div').length >= 1){
