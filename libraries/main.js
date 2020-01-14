@@ -3,6 +3,16 @@ $('.layer2').prepend('<a href="../index.html" class="btn btn-default btn-md home
 
 $('.container_q').append('<div class="qbo" id="limit"><input type="checkbox" id="lm"><label for="lm">Thêm tính năng "vui chơi có thưởng" dành riêng cho các bạn nam (Cảnh báo 16+)</label></div>');
 
+function getNextWeek(){
+	return parseInt($('h3.text-center').text().match(/\d+/)[0]) + 1;
+}
+
+function getFirstDayInNextWeek(){
+	return getNextWeek()*7 - 6;
+}
+
+$('.layer4').append('<a href="../Tuan' + getNextWeek() + '/day' + getFirstDayInNextWeek() + '.html" class="btn btn-warning next-week">Tuần kế tiếp <i class="fa fa-arrow-circle-o-right"></i></a>');
+
 $('#m a, .container2 a, #m td:nth-child(4) a').attr('target','_blank');
 if($("dfn.ol").closest('div').length >= 1){
   $('.container_q').append('<div class="qbo" id="diff"><input type="checkbox" id="qbo"><label for="qbo">Tăng độ khó (thêm các họ từ liên quan)</label></div>');

@@ -1046,17 +1046,17 @@ tbody tr:hover
                     </tr>
                     <tr>
                       <th scope="row">182</th>
-                      <td>condescending</td>
-                      <td>generation</td>
-                      <td>backfired</td>
-                      <td>downside</td>
-                      <td>incident</td>
-                      <td>segue</td>
-                      <td>pocket</td>
-                      <td>sue</td>
-                      <td>pump</td>
-                      <td>valid</td>
-                      <td>explicit</td>
+                      <td>intimate</td>
+                      <td>vulnerable</td>
+                      <td>intrigued</td>
+                      <td>snuggle</td>
+                      <td>interpersonal</td>
+                      <td>playful</td>
+                      <td>affectionate</td>
+                      <td>mushy</td>
+                      <td>thrive</td>
+                      <td>yearn</td>
+                      <td></td>
                     </tr>
                     <tr>
                       <th scope="row">183</th>
@@ -1326,17 +1326,17 @@ tbody tr:hover
                     </tr>
                     <tr>
                       <th scope="row">202</th>
-                      <td>inversion</td>
-                      <td>ogled</td>
-                      <td>jerk</td>
-                      <td>tits</td>
-                      <td>biologically</td>
-                      <td>life-giving</td>
-                      <td>offspring</td>
-                      <td>selfless</td>
-                      <td>pay sth forward</td>
-                      <td>sustenance</td>
-                      <td>supple</td>
+                      <td>cabinet</td>
+                      <td>handrail</td>
+                      <td>cord</td>
+                      <td>crate</td>
+                      <td>prestigious</td>
+                      <td>catering</td>
+                      <td>escalator</td>
+                      <td>blueprint</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                     <tr>
                       <th scope="row">203</th>
@@ -1456,6 +1456,11 @@ tbody tr:hover
 	</div>
 	<script type="text/javascript">
 		$(document).ready( function () {
-                $('#table').DataTable();
-            } );
+                  $('th').each(function(){
+                  if($(this).attr('scope') == 'row'){
+                        $(this).html('<a href="../Tuan' + Math.ceil($(this).text()/7) + '/day' + $(this).text() + '.html" target="_blank">' + $(this).text() + '</a>');
+                        } 
+                  });
+            $('#table').DataTable();           
+        });
 	</script>

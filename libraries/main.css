@@ -1404,3 +1404,10 @@ tr{vertical-align: top;}
     width: 1.1em;
   }
 }
+
+.next-week{
+  margin: 50px auto;
+  display: table;
+  color: black;
+  font-weight: bold;
+}
