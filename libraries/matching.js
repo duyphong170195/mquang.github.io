@@ -113,6 +113,14 @@ var count = 0;
         count++;
         term.className = "score";
         def.className = "score";
+        var word = document.querySelector("#terms [data-index='"+selectedTerm+"'] span").textContent.split('(')[0];
+        var msg = new SpeechSynthesisUtterance(word);
+      
+        msg.voice = speechSynthesis.getVoices().filter(function(voice) {
+          return voice.name == "Google UK English Male"
+        })[0];
+   
+        window.speechSynthesis.speak(msg);
         if(count == 6){
           document.getElementById("exitRV").style.display = 'block';
         }
@@ -175,11 +183,20 @@ var count = 0;
     defsContainer.setAttribute("class", "fadeOut");
     setTimeout(function() {
         shuffle();
+        $('#terms li span').each(function(){
+    var r = /\d+/;
+    var getString = $(this).text();
+    var getNumber = $(this).text().match(r);
+    var result = getString.replace(getNumber, '<a href="../Tuan'+Math.ceil(getNumber/7)+'/day'+getNumber+'.html" target="_blank">'+getNumber+'</a>');
+      $(this).html(result);
+    });
+    $('.wrapTest ul li span:has(img)').css('padding','0');
+    $('.wrapTest ul li span img, .wrapTest ul li span i').css('pointer-events','none');
+    $('.wrapTest ul li span i dfn').css('pointer-events','auto');
         termsContainer.removeAttribute("class", "fadeOut");
         defsContainer.removeAttribute("class", "fadeOut");
       }, 450)
       //shuffle();
-
   });
   document.getElementById("exitRV").addEventListener("click", function() {
     $('.wrapTest').hide();
